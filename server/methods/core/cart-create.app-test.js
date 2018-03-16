@@ -305,7 +305,7 @@ describe("Add/Create cart methods", function () {
         return Meteor.call("accounts/addressBookRemove", () => {
           expect(true).to.be.true;
         });
-      }).to.not.throw;
+      }).to.not.throw();
 
       expect(accountUpdateStub).to.not.have.been.called;
       accountUpdateStub.restore();

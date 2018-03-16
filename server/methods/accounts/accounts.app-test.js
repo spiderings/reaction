@@ -139,7 +139,7 @@ describe("Account Meteor method ", function () {
           "accounts/addressBookAdd",
           () => { expect(true).to.be.true; }
         );
-      }).to.not.throw;
+      }).to.not.throw();
 
       expect(accountSpy).to.not.have.been.called;
 
@@ -309,7 +309,7 @@ describe("Account Meteor method ", function () {
           "accounts/addressBookUpdate",
           () => { expect(true).to.be.true; }
         );
-      }).to.not.throw;
+      }).to.not.throw();
       expect(updateAccountSpy).to.not.have.been.called;
     });
 
@@ -465,7 +465,7 @@ describe("Account Meteor method ", function () {
           "accounts/addressBookRemove",
           () => { expect(true).to.be.true; }
         );
-      }).to.not.throw;
+      }).to.not.throw();
       expect(updateAccountSpy).to.not.have.been.called;
     });
 
@@ -531,7 +531,7 @@ describe("Account Meteor method ", function () {
           groupId: Random.id(),
           email: fakeUser.emails[0].address,
           name: fakeUser.profile.addressBook[0].fullName
-        })).to.not.throw(Meteor.Error, /Access denied/);
+        })).to.not.throw();
       return done();
     });
   });
@@ -560,7 +560,7 @@ describe("Account Meteor method ", function () {
         Meteor.call("accounts/inviteShopOwner", {
           email: fakeUser.emails[0].address,
           name: fakeUser.profile.addressBook[0].fullName
-        })).to.not.throw(Meteor.Error, /Access denied/);
+        })).to.not.throw();
 
       return done();
     });
@@ -571,7 +571,7 @@ describe("Account Meteor method ", function () {
         Meteor.call("accounts/inviteShopOwner", {
           email: "custom@email.co",
           name: "custom name"
-        })).to.not.throw(Meteor.Error, /Access denied/);
+        })).to.not.throw();
 
       return done();
     });
